@@ -1,5 +1,5 @@
 const assert = require('assert');
-const Park = require('../models/park2.js');
+const Park = require('../models/park.js');
 const Dinosaur = require('../models/dinosaur.js');
 
 describe('Park', function() {
@@ -92,18 +92,18 @@ describe('Park', function() {
     assert.deepStrictEqual(park.bestDinosaur(), expected);
   });
 
-  it('should be able to remove all dinosaurs by species',function(){
-    park.addDinosaur("t-rex");
-    park.addDinosaur("dippy");
-    park.addDinosaur("terra");
-    park.addDinosaur("sabre tooth");
-    park.addDinosaur("dippy2");
-    park.addDinosaur("rhino");
-    park.removeByspecies('dippy2');
-    const actual = park.collectionOfDinosaurs;
-    const expected = ['t-rex', 'dippy', 'terra', 'sabre tooth', 'rhino']
-    assert.deepStrictEqual(actual, expected);
-  });
+  it('should be able to find all dinosaurs species',);
+  // function(){
+  //   park.addDinosaur("t-rex");
+  //   park.addDinosaur("dippy");
+  //   park.addDinosaur("terra");
+  //   park.addDinosaur("sabre tooth");
+  //   park.addDinosaur("dippy2");
+  //   park.addDinosaur("rhino");
+  //   const expected = ['t-rex', 'dippy', 'terra', 'sabre tooth', 'dippy2', 'rhino']
+  //   const actual = park.speciesDinosaurs;
+  //   assert.deepStrictEqual(actual, expected);
+  // });
 
   it('should be able to remove all dinosaurs of a particular species');
 
